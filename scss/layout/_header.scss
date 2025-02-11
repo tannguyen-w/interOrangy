@@ -4,4 +4,10 @@
   position: relative;
   background-size: cover;
   background-position: top;
+
+  .container {
+    @include abstracts.screen(sm) {
+      padding: 0 8px !important;
+    }
+  }
 }

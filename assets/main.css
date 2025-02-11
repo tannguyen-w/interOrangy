@@ -1654,6 +1654,11 @@ h4 {
   background-size: cover;
   background-position: top;
 }
+@media (max-width: 575.98px) {
+  .orangy-header .container {
+    padding: 0 8px !important;
+  }
+}
 
 .nav {
   display: fixed;
@@ -1669,6 +1674,11 @@ h4 {
 }
 .nav-top__desc {
   font-size: 1.2rem;
+}
+@media (max-width: 767.98px) {
+  .nav-top__desc {
+    font-size: 0.9rem;
+  }
 }
 .nav-bottom {
   display: flex;
@@ -1732,6 +1742,11 @@ h4 {
 }
 .time__number {
   font-size: 1.4rem;
+}
+@media (max-width: 767.98px) {
+  .time__number {
+    font-size: 1.2rem;
+  }
 }
 .time__number--desc {
   font-size: 0.9rem;
