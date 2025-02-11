@@ -1,14 +1,13 @@
 <style>
   .banner {
     {% if section.settings.orangy-banner-background != blank %}
-            background: url('{{ section.settings.orangy-banner-background | image_url }}');
-            {% else %}
-            background: url('{{ 'banner-desktop.png' |  asset_url }}');
-        {% endif %}
-
-        background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
+      background: url('{{ section.settings.orangy-banner-background | image_url }}');
+    {% else %}
+      background: url('{{ 'banner-desktop.png' | asset_url }}');
+    {% endif %}
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
   }
 </style>
 
@@ -23,17 +22,15 @@
     "class": "orangy-banner",
     "settings": [
       {
-            "type": "image_picker",
-            "id": "orangy-banner-background",
-            "label": "Image Background"
-        }
+        "type": "image_picker",
+        "id": "orangy-banner-background",
+        "label": "Image Background"
+      }
     ],
     "presets": [
       {
         "name": "Orangy Banner",
-        "settings": {
-       
-        }
+        "settings": {}
       }
     ]
   }

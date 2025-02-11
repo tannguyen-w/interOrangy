@@ -1,0 +1,102 @@
+<div class="container">
+    <div class="about">
+        <div class="row g-0 gx-xxl-1 row-cols-2 row-cols-md-1 reverse-row">
+            <div class="col">
+                <div class="about__image">
+                  {% if section.settings.orangy-image-01 != blank %} 
+                    <img src="{{section.settings.orangy-image-01 }}" alt="Grid Image 1" class="about__img" width="684" height="800">
+                    {% else %}
+                      
+                    <img src="{{ 'banner-desktop.png' |  asset_url}}" alt="Grid Image 1" class="about__img" width="684" height="800"/>
+                  {% endif %}
+                </div>
+            </div>
+            <div class="col">
+                <div class="about__content">
+                    <h2 class="about__heading">Lorem ipsum</h2>
+                    <div class="about__para">
+                        <p class="about__title">Excepteur eiusmod consectetur</p>
+                        <p class="about__desc">
+                            Proident dolore nisi eiusmod excepteur aliquip esse ut excepteur. Non excepteur sunt
+                            reprehenderit sit ex ullamco eiusmod Lorem incididunt nisi mollit nostrud. Irure velit enim
+                            elit minim commodo qui culpa cillum duis fugiat consequat pariatur.
+                        </p>
+                    </div>
+                    <div class="about__para">
+                        <p class="about__title">Quis aliqua reprehenderit</p>
+                        <p class="about__desc">
+                            Proident dolore nisi eiusmod excepteur aliquip esse ut excepteur. Non excepteur sunt
+                            reprehenderit sit ex ullamco eiusmod Lorem incididunt nisi mollit nostrud. Irure velit enim
+                            elit minim commodo qui culpa cillum duis fugiat consequat pariatur.
+                        </p>
+                    </div>
+                    <div class="about__para">
+                        <p class="about__title">Ad sit cillum amet duis quis commodo</p>
+                        <p class="about__desc">
+                            Proident dolore nisi eiusmod excepteur aliquip esse ut excepteur. Non excepteur sunt
+                            reprehenderit sit ex ullamco eiusmod Lorem incididunt nisi mollit nostrud. Irure velit enim
+                            elit minim commodo qui culpa cillum duis fugiat consequat pariatur.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-0 gx-xxl-1 row-cols-2 row-cols-md-1">
+            <div class="col">
+                <div class="about__content">
+                    <h2 class="about__heading">Mollit aliquip do ipsum consectetur</h2>
+                    <p class="about__desc">
+                        Ex laborum ea qui consectetur mollit commodo eiusmod culpa dolor cupidatat. Ullamco dolore irure
+                        ea sit elit velit non officia. Ad eu reprehenderit in et voluptate mollit. Reprehenderit
+                        incididunt magna consequat enim sit eiusmod est dolor laborum cupidatat.
+                    </p>
+                    <p class="about__desc">
+                        Ipsum minim mollit irure dolore. Sint fugiat deserunt dolor aute enim et cillum adipisicing
+                        cillum nostrud anim. Sit dolore incididunt dolore do sunt pariatur consectetur id qui pariatur
+                        eu incididunt adipisicing. Irure sint fugiat officia veniam consectetur. Esse laborum amet
+                        aliqua ad in sunt labore duis.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="about__image">
+                    {% if section.settings.orangy-image-01 != blank %} 
+                      <img src="{{section.settings.orangy-image-02 }}" alt="Grid Image 2" class="about__img" width="684" height="800">
+                      {% else %}
+                        
+                      <img src="{{ 'banner-desktop.png' |  asset_url}}" alt="Grid Image 2" class="about__img" width="684" height="800"/>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Orangy Image with Text",
+    "tag": "section",
+    "class": "orangy-about",
+    "settings": [
+    {
+            "type": "image_picker",
+            "id": "orangy-image-01",
+            "label": "Grid Image 1",
+        },
+        {
+            "type": "image_picker",
+            "id": "orangy-image-02",
+            "label": "Grid Image 2",
+        }
+    ],
+    "presets": [
+      {
+        "name": "Orangy Image with Text",
+        "settings": {
+        }
+      }
+    ]
+  }
+{% endschema %}
