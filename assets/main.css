@@ -493,12 +493,12 @@ h4 {
 
 .g-7,
 .gx-7 {
-  --grid-gutter-x: 75px;
+  --grid-gutter-x: 78px;
 }
 
 .g-7,
 .gy-7 {
-  --grid-gutter-y: 75px;
+  --grid-gutter-y: 78px;
 }
 
 @media (max-width: 1919.98px) {
@@ -671,11 +671,11 @@ h4 {
   }
   .g-xxxl-7,
   .gx-xxxl-7 {
-    --grid-gutter-x: 75px;
+    --grid-gutter-x: 78px;
   }
   .g-xxxl-7,
   .gy-xxxl-7 {
-    --grid-gutter-y: 75px;
+    --grid-gutter-y: 78px;
   }
 }
 @media (max-width: 1399.98px) {
@@ -848,11 +848,11 @@ h4 {
   }
   .g-xxl-7,
   .gx-xxl-7 {
-    --grid-gutter-x: 75px;
+    --grid-gutter-x: 78px;
   }
   .g-xxl-7,
   .gy-xxl-7 {
-    --grid-gutter-y: 75px;
+    --grid-gutter-y: 78px;
   }
 }
 @media (max-width: 1199.98px) {
@@ -1025,11 +1025,11 @@ h4 {
   }
   .g-xl-7,
   .gx-xl-7 {
-    --grid-gutter-x: 75px;
+    --grid-gutter-x: 78px;
   }
   .g-xl-7,
   .gy-xl-7 {
-    --grid-gutter-y: 75px;
+    --grid-gutter-y: 78px;
   }
 }
 @media (max-width: 991.98px) {
@@ -1202,11 +1202,11 @@ h4 {
   }
   .g-lg-7,
   .gx-lg-7 {
-    --grid-gutter-x: 75px;
+    --grid-gutter-x: 78px;
   }
   .g-lg-7,
   .gy-lg-7 {
-    --grid-gutter-y: 75px;
+    --grid-gutter-y: 78px;
   }
 }
 @media (max-width: 767.98px) {
@@ -1379,11 +1379,11 @@ h4 {
   }
   .g-md-7,
   .gx-md-7 {
-    --grid-gutter-x: 75px;
+    --grid-gutter-x: 78px;
   }
   .g-md-7,
   .gy-md-7 {
-    --grid-gutter-y: 75px;
+    --grid-gutter-y: 78px;
   }
 }
 @media (max-width: 575.98px) {
@@ -1556,11 +1556,11 @@ h4 {
   }
   .g-sm-7,
   .gx-sm-7 {
-    --grid-gutter-x: 75px;
+    --grid-gutter-x: 78px;
   }
   .g-sm-7,
   .gy-sm-7 {
-    --grid-gutter-y: 75px;
+    --grid-gutter-y: 78px;
   }
 }
 .d-block {
@@ -1739,8 +1739,11 @@ h4 {
 .about__img {
   object-fit: cover;
 }
+.about__img--second {
+  margin-left: 4px;
+}
 .about__content {
-  padding: 70px 50px;
+  padding: 48px 50px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -1757,9 +1760,12 @@ h4 {
     height: 100%;
   }
 }
+.about__content--second {
+  padding: 65px 50px;
+}
 .about__heading {
   font-size: 6.4rem;
-  margin-bottom: 24px;
+  margin-bottom: 6px;
   line-height: 7.4rem;
 }
 @media (max-width: 1199.98px) {
@@ -1794,6 +1800,7 @@ h4 {
   font-size: 2rem;
   line-height: 1.5;
   font-weight: 500;
+  margin-bottom: 10px;
 }
 @media (max-width: 767.98px) {
   .about__title {
@@ -1802,7 +1809,7 @@ h4 {
 }
 .about__desc {
   font-size: 1.4rem;
-  line-height: 2.2rem;
+  line-height: 157.143%;
 }
 .about__desc + .about__desc {
   margin-top: 16px;

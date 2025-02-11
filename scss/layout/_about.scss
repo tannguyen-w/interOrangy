@@ -49,10 +49,13 @@
 
   &__img {
     object-fit: cover;
+    &--second {
+      margin-left: 4px;
+    }
   }
 
   &__content {
-    padding: 70px 50px;
+    padding: 48px 50px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -67,11 +70,15 @@
       padding: 34px 18px 42px;
       height: 100%;
     }
+
+    &--second {
+      padding: 65px 50px;
+    }
   }
 
   &__heading {
     font-size: 6.4rem;
-    margin-bottom: 24px;
+    margin-bottom: 6px;
     line-height: 7.4rem;
 
     @include abstracts.screen(xl) {
@@ -105,6 +112,7 @@
     font-size: 2rem;
     line-height: 1.5;
     font-weight: 500;
+    margin-bottom: 10px;
 
     @include abstracts.screen(md) {
       font-size: 1.8rem;
@@ -113,7 +121,7 @@
 
   &__desc {
     font-size: 1.4rem;
-    line-height: 2.2rem;
+    line-height: 157.143%;
   }
 
   &__desc + &__desc {

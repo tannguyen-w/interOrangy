@@ -44,7 +44,7 @@
 
         <div class="row g-0 gx-xxl-1 row-cols-2 row-cols-md-1">
             <div class="col">
-                <div class="about__content">
+                <div class="about__content about__content--second">
                     <h2 class="about__heading">Mollit aliquip do ipsum consectetur</h2>
                     <p class="about__desc">
                         Ex laborum ea qui consectetur mollit commodo eiusmod culpa dolor cupidatat. Ullamco dolore irure
@@ -63,10 +63,9 @@
             <div class="col">
                 <div class="about__image">
                     {% if section.settings.orangy-image-01 != blank %} 
-                      <img src="{{section.settings.orangy-image-02 }}" alt="Grid Image 2" class="about__img" width="684" height="800">
+                      <img src="{{section.settings.orangy-image-02 }}" alt="Grid Image 2" class="about__img about__img--second" width="684" height="800">
                       {% else %}
-                        
-                      <img src="{{ 'banner-desktop.png' |  asset_url}}" alt="Grid Image 2" class="about__img" width="684" height="800"/>
+                      <img src="{{ 'banner-desktop.png' |  asset_url}}" alt="Grid Image 2" class="about__img about__img--second" width="684" height="800"/>
                     {% endif %}
                 </div>
             </div>
