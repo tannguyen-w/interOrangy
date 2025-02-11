@@ -1650,13 +1650,43 @@ h4 {
   }
 }
 .orangy-header {
-  position: relative;
+  position: fixed;
+  width: 100%;
   background-size: cover;
   background-position: top;
 }
 @media (max-width: 575.98px) {
   .orangy-header .container {
     padding: 0 8px !important;
+  }
+}
+
+.banner {
+  height: 76.5vh;
+}
+.banner__heading {
+  position: absolute;
+  top: 43%;
+  left: calc(50% - 8px);
+  translate: -50% -50%;
+  text-align: center;
+  letter-spacing: normal;
+  width: min(822px, 100%);
+  font-size: 6.4rem;
+  line-height: 115.625%;
+  color: #fff;
+}
+@media (max-width: 1199.98px) {
+  .banner__heading {
+    font-size: 5.2rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .banner__heading {
+    font-size: 4.8rem;
+    top: 39%;
+    left: 50%;
+    width: calc(100% - 32px);
   }
 }
 
@@ -1672,8 +1702,14 @@ h4 {
   background: #1f1f1f;
   color: #fff;
 }
+@media (max-width: 767.98px) {
+  .nav-top {
+    padding: 5px 12px;
+  }
+}
 .nav-top__desc {
   font-size: 1.2rem;
+  letter-spacing: 0;
 }
 @media (max-width: 767.98px) {
   .nav-top__desc {
@@ -1686,7 +1722,6 @@ h4 {
   justify-content: space-between;
   height: 36px;
   margin-top: 6px;
-  background: #000;
 }
 .nav-bottom-menu__btn {
   display: flex;
@@ -1695,6 +1730,12 @@ h4 {
   padding: 4px 12px;
   font-size: 1.4rem;
   color: #fff;
+}
+@media (max-width: 767.98px) {
+  .nav-bottom-menu__btn {
+    padding: 4px 6px;
+    gap: 6px;
+  }
 }
 .nav-bottom__logo {
   margin-bottom: -2px;
@@ -1737,6 +1778,11 @@ h4 {
   justify-content: center;
   gap: 8px;
 }
+@media (max-width: 767.98px) {
+  .time {
+    gap: 4px;
+  }
+}
 .time__group {
   text-align: center;
 }
@@ -1750,6 +1796,12 @@ h4 {
 }
 .time__number--desc {
   font-size: 0.9rem;
+  letter-spacing: -0.5px;
+}
+@media (max-width: 767.98px) {
+  .time__number--desc {
+    font-size: 0.8rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
