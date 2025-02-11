@@ -13,12 +13,6 @@
     margin-top: 50px;
     --width: 100%;
     --height: 540px;
-  }
-
-  @include abstracts.screen(md) {
-    margin-top: 40px;
-    --width: 100%;
-    --height: 420px;
 
     .reverse-row .col:first-child {
       order: 2;
@@ -27,6 +21,12 @@
     .reverse-row .col:last-child {
       order: 1;
     }
+  }
+
+  @include abstracts.screen(md) {
+    margin-top: 40px;
+    --width: 100%;
+    --height: 420px;
   }
 
   &__img,
@@ -49,8 +49,17 @@
 
   &__img {
     object-fit: cover;
+
     &--second {
       margin-left: 4px;
+
+      @include abstracts.screen(xxl) {
+        margin-left: 0;
+      }
+
+      @include abstracts.screen(md) {
+        margin-top: 10px;
+      }
     }
   }
 
@@ -67,12 +76,21 @@
     }
 
     @include abstracts.screen(md) {
-      padding: 34px 18px 42px;
+      padding: 27px 18px 42px;
       height: 100%;
     }
 
     &--second {
       padding: 65px 50px;
+
+      @include abstracts.screen(lg) {
+        padding: 50px 30px;
+      }
+
+      @include abstracts.screen(md) {
+        padding: 5px 18px 17px;
+        height: 100%;
+      }
     }
   }
 
@@ -92,7 +110,9 @@
 
     @include abstracts.screen(md) {
       font-size: 3.2rem;
+      line-height: 131.25%;
       margin-bottom: 0;
+      letter-spacing: 0;
     }
   }
 
@@ -122,9 +142,17 @@
   &__desc {
     font-size: 1.4rem;
     line-height: 157.143%;
+    letter-spacing: 0;
   }
 
   &__desc + &__desc {
     margin-top: 16px;
+    letter-spacing: 0;
+  }
+}
+
+.container {
+  @include abstracts.screen(md) {
+    padding: 0 8px;
   }
 }
