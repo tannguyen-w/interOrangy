@@ -1,0 +1,23 @@
+@use "../abstracts";
+
+.time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  &__group {
+    text-align: center;
+  }
+
+  &__number {
+    font-size: 1.4rem;
+    @include abstracts.screen(md) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__number--desc {
+    font-size: 0.9rem;
+  }
+}
