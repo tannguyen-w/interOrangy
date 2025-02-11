@@ -1650,13 +1650,39 @@ h4 {
   }
 }
 .orangy-header {
-  position: relative;
+  position: fixed;
+  width: 100%;
   background-size: cover;
   background-position: top;
 }
 @media (max-width: 575.98px) {
   .orangy-header .container {
     padding: 0 8px !important;
+  }
+}
+
+.banner {
+  height: 80vh;
+}
+.banner__heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  text-align: center;
+  width: min(822px, 100%);
+  font-size: 6.4rem;
+  color: #fff;
+}
+@media (max-width: 1199.98px) {
+  .banner__heading {
+    font-size: 5.2rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .banner__heading {
+    font-size: 5.4rem;
+    width: calc(100% - 40px);
   }
 }
 
@@ -1686,7 +1712,6 @@ h4 {
   justify-content: space-between;
   height: 36px;
   margin-top: 6px;
-  background: #000;
 }
 .nav-bottom-menu__btn {
   display: flex;

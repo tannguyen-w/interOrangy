@@ -1,0 +1,40 @@
+<style>
+  .banner {
+    {% if section.settings.orangy-banner-background != blank %}
+            background: url('{{ section.settings.orangy-banner-background | image_url }}');
+            {% else %}
+            background: url('{{ 'banner-desktop.png' |  asset_url }}');
+        {% endif %}
+
+        background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  }
+</style>
+
+<div class="banner">
+  <h1 class="banner__heading">Quis aliqua reprehenderit excepteur et dolore</h1>
+</div>
+
+{% schema %}
+  {
+    "name": "Orangy Banner",
+    "tag": "section",
+    "class": "orangy-banner",
+    "settings": [
+      {
+            "type": "image_picker",
+            "id": "orangy-banner-background",
+            "label": "Image Background"
+        }
+    ],
+    "presets": [
+      {
+        "name": "Orangy Banner",
+        "settings": {
+       
+        }
+      }
+    ]
+  }
+{% endschema %}
