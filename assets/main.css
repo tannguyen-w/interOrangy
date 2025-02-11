@@ -678,9 +678,9 @@ h4 {
     --grid-gutter-y: 75px;
   }
 }
-@media (max-width: 1439.98px) {
+@media (max-width: 1399.98px) {
   .container {
-    max-width: 1376px;
+    max-width: 1140px;
   }
   .row-cols-xxl-1 > * {
     flex: 0 0 auto;
@@ -1649,15 +1649,13 @@ h4 {
     display: none !important;
   }
 }
-.header {
+.orangy-header {
   position: relative;
   background-size: cover;
   background-position: top;
-  height: 100vh;
 }
 
 .nav {
-  padding-top: 30px;
   display: fixed;
 }
 .nav-top {
