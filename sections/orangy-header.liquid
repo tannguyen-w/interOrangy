@@ -1,0 +1,106 @@
+<script src="../assets/orangy-header.js" async defer ></script>
+
+<style>
+  .nav-top {
+    justify-content: space-between;
+  }
+  .nav {
+    padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+</style>
+
+    <div class="container">
+        <div class="nav">
+            <div class="nav-top">
+                <div class="nav-top__desc">FREE SHIPPING · COUPON: FREE. Exchanges and returns within 30 days.</div>
+                <div class="time">
+                    <div class="time__group">
+                        <p class="time__number">00</p>
+                        <p class="time__number--desc">days</p>
+                    </div>
+                    <span>:</span>
+                    <div class="time__group">
+                        <p class="time__number">10</p>
+                        <p class="time__number--desc">hours</p>
+                    </div>
+                    <span>:</span>
+                    <div class="time__group">
+                        <p class="time__number">37</p>
+                        <p class="time__number--desc">min</p>
+                    </div>
+                    <span>:</span>
+                    <div class="time__group">
+                        <p class="time__number">42</p>
+                        <p class="time__number--desc">sec</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-bottom">
+                <div class="nav-bottom-menu">
+                    <button class="nav-bottom-menu__btn">
+
+                        <img src={{ 'nav-menu.svg' |  asset_url }} alt="menu" height="8" width="25" />
+                        MENU
+                    </button>
+                </div>
+
+                <a href="./" class="nav-bottom__logo">
+                    <img src={{ 'logo.svg' |  asset_url }} alt="Logo" width="80" height="22" />
+                </a>
+
+                <div class="nav-bottom__act">
+                    <button class="nav-bottom__btn-search nav-bottom__btn d-md-none">
+                        <img src={{ 'search.svg' |  asset_url }} alt="Search" class="nav-bottom__search--img" width="15" height="15" />
+                        SEARCH
+                    </button>
+                    <div class="nav-bottom__btn-wrap d-md-none">
+                        <button class="nav-bottom__btn">LOGIN</button>
+                    </div>
+                    <div class="nav-bottom__btn-wrap">
+                        <button class="nav-bottom__btn">BAG <span class="nav-bottom__btn--quantity">(0)</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+{% schema %}
+  {
+    "name": "Orangy Header",
+    "tag": "section",
+    "class": "orangy-header",
+    "settings": [
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 30
+    },
+    {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 0
+    }
+    ],
+    "presets": [
+      {
+        "name": "Orangy Header",
+        "settings": {
+        }
+      }
+    ]
+  }
+{% endschema %}
