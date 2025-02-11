@@ -6,6 +6,10 @@
   justify-content: center;
   gap: 8px;
 
+  @include abstracts.screen(md) {
+    gap: 4px;
+  }
+
   &__group {
     text-align: center;
   }
@@ -19,5 +23,10 @@
 
   &__number--desc {
     font-size: 0.9rem;
+    letter-spacing: -0.5px;
+
+    @include abstracts.screen(md) {
+      font-size: 0.8rem;
+    }
   }
 }

@@ -12,8 +12,13 @@
     background: #1f1f1f;
     color: #fff;
 
+    @include abstracts.screen(md) {
+      padding: 5px 12px;
+    }
+
     &__desc {
       font-size: 1.2rem;
+      letter-spacing: 0;
 
       @include abstracts.screen(md) {
         font-size: 0.9rem;
@@ -37,6 +42,11 @@
       padding: 4px 12px;
       font-size: 1.4rem;
       color: #fff;
+
+      @include abstracts.screen(md) {
+        padding: 4px 6px;
+        gap: 6px;
+      }
     }
 
     &__logo {
