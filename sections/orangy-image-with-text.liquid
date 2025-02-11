@@ -1,0 +1,146 @@
+<style>
+  .about.reverse-row .col:first-child {
+      order: 2;
+  }
+  .about.reverse-row .col:last-child {
+    order: 1;
+  }
+</style>
+
+<div class="container">
+  <div class="about">
+    <div class="row g-0 gx-md-7 gx-xxl-1 row-cols-2 row-cols-lg-1 {% if section.settings.layout == 'text_first' %} reverse-row{% endif %}">
+      <div class="col">
+        <div class="about__image">
+          {% if section.settings.orangy_image_01 != blank %}
+            {{ section.settings.orangy_image_01 | image_url: width: 684 | image_tag: class: 'about__img' }}
+          {% else %}
+            <img
+              src="{{ 'banner-desktop.png' | asset_url}}"
+              alt="Grid Image 1"
+              class="about__img"
+              width="684"
+              height="800"
+            >
+          {% endif %}
+        </div>
+      </div>
+      <div class="col">
+        <div class="about__content">
+          <h2 class="about__heading">Lorem ipsum</h2>
+          {% if section.blocks %}
+            {% for item in section.blocks %}
+              {% if item.type == 'about_item' %}
+                <div class="about__para">
+                  <p class="about__title">{{ item.settings.orangy_about_title }}</p>
+                  <p class="about__desc">
+                    {{ item.settings.orangy_about_desc }}
+                  </p>
+                </div>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Orangy Image with Text",
+  "tag": "section",
+  "class": "orangy-about",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "orangy_image_01",
+      "label": "Grid Image 1"
+    },
+    {
+      "type": "text",
+      "id": "orangy_about_heading_01",
+      "label": "About Heading",
+      "default": "Lorem ipsum"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "options": [
+        {
+          "value": "image_first",
+          "label": "t:sections.image-with-text.settings.layout.options__1.label"
+        },
+        {
+          "value": "text_first",
+          "label": "t:sections.image-with-text.settings.layout.options__2.label"
+        }
+      ],
+      "default": "image_first",
+      "label": "t:sections.image-with-text.settings.layout.label",
+      "info": "t:sections.image-with-text.settings.layout.info"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Orangy About Item",
+      "type": "about_item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "orangy_about_title",
+          "label": "About Title"
+        },
+        {
+          "type": "text",
+          "id": "orangy_about_desc",
+          "label": "About Content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Orangy Image with Text",
+      "settings": {},
+      "blocks": [
+        {
+          "type": "about_item",
+          "settings": {
+            "orangy_about_title": "Excepteur eiusmod consectetur",
+            "orangy_about_desc": "Proident dolore nisi eiusmod excepteur aliquip esse ut excepteur. Non excepteur sunt reprehenderit sit ex ullamco eiusmod Lorem incididunt nisi mollit nostrud. Irure velit enim elit minim commodo qui culpa cillum duis fugiat consequat pariatur."
+          }
+        },
+        {
+          "type": "about_item",
+          "settings": {
+            "orangy_about_title": "Quis aliqua reprehenderit",
+            "orangy_about_desc": "Proident dolore nisi eiusmod excepteur aliquip esse ut excepteur. Non excepteur sunt reprehenderit sit ex ullamco eiusmod Lorem incididunt nisi mollit nostrud. Irure velit enim elit minim commodo qui culpa cillum duis fugiat consequat pariatur."
+          }
+        },
+        {
+          "type": "about_item",
+          "settings": {
+            "orangy_about_title": "Ad sit cillum amet duis quis commodo",
+            "orangy_about_desc": "Proident dolore nisi eiusmod excepteur aliquip esse ut excepteur. Non excepteur sunt reprehenderit sit ex ullamco eiusmod Lorem incididunt nisi mollit nostrud. Irure velit enim elit minim commodo qui culpa cillum duis fugiat consequat pariatur."
+          }
+        },
+        {
+          "type": "about_item",
+          "settings": {
+            "orangy_about_title": "",
+            "orangy_about_desc": "Ex laborum ea qui consectetur mollit commodo eiusmod culpa dolor cupidatat. Ullamco dolore irure ea sit elit velit non officia. Ad eu reprehenderit in et voluptate mollit. Reprehenderit incididunt magna consequat enim sit eiusmod est dolor laborum cupidatat."
+          }
+        },
+        {
+          "type": "about_item",
+          "settings": {
+            "orangy_about_title": "",
+            "orangy_about_desc": "Ipsum minim mollit irure dolore. Sint fugiat deserunt dolor aute enim et cillum adipisicing cillum nostrud anim. Sit dolore incididunt dolore do sunt pariatur consectetur id qui pariatur eu incididunt adipisicing. Irure sint fugiat officia veniam consectetur. Esse laborum amet aliqua ad in sunt labore duis."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
